@@ -27,14 +27,15 @@ const catalogo = [
 ];
 
 for (const produtoCatalogo of catalogo) {
-    const cartaoProduto = `<div class="border-solid, border-2, e border-gray-500 w-48 my-2" 
+    const cartaoProduto = `<div class="border-solid border-2 border-gray-500 w-48 my-2 flex-row" 
     id="card-produto-${produtoCatalogo.id}">
-<img 
-  src="./img/${produtoCatalogo.imagem}" 
-  alt="imagem do skate 1"/>
-  <p>${produtoCatalogo.ano}</p>
-  <p>${produtoCatalogo.marca}</p>
-  <button>Add</button>`
+    <img 
+    src="./img/${produtoCatalogo.imagem}" 
+    alt="imagem do skate 1"/>
+    <p>${produtoCatalogo.ano}</p>
+    <p>${produtoCatalogo.marca}</p>
+    <button>Add</button>
+    </div>`
 
     document.getElementById("container-produto").innerHTML += cartaoProduto;
 }
