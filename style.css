@@ -2,10 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* styles.css */
-.flex-container {
-    display: flex;
-    flex-direction: row;
-}
-
