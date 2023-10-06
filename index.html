@@ -5,8 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
   </head>
   <body>
+    <section id="colecao" class="fixed top-0 bg-zinc-900 text-slate-200 right-0 h-screen w-[360px]">
+      <div id="cabecalho colecao" class="flex justify-between m-4">
+        <p>Collection</p>
+        <button id="fechar-colecao">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+      </div>
+
+      <section id="produtos-colecao">
+          
+
+      </section>
+
+
+
+
+    </section>
     <header class="flex bg-zinc-900 justify-between items-center">
       <!--src="./img/Tech-Deck-logo.jpg"--> 
       <img 
@@ -14,12 +35,15 @@
         src="./img/td_logo.png" 
         alt="Logo Tech Deck">
         <div class="text-slate-200">
-          <button>Colecao</button>
+          <button id="abrir-colecao">
+            <p>Collection</p>
+            <i class="fa-solid fa-box-archive" style="color: #ffffff;"></i>
+          </button>
         </div>
     </header>
     <main>
       <section id="container-produto" class="flex flex-wrap"></section>
     </main>
-    <script src="./main.js"></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
