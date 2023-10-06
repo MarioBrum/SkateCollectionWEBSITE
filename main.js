@@ -58,19 +58,87 @@ const catalogo = [
         ano: '2009',
         marca: 'Plan B',
         imagem: '20021283_09Q4_MixZZZ_plan_b_jereme_rogers_1.jpg',
-    }
+    },
+    {   
+        id: 11,
+        ano: '2009',
+        marca: 'City Stars',
+        imagem: '20021284_09Q4_MixZZZ_citystars_team_1.jpg',
+    },
+    {   
+        id: 12,
+        ano: '2009',
+        marca: 'City Stars',
+        imagem: '20021285_09Q4_MixZZZ_citystars_kareem_campbell_1.jpg',
+    },
+    {   
+        id: 13,
+        ano: '2009',
+        marca: 'Cliche',
+        imagem: '20021286_09Q4_MixZZZ_cliche_team_1.jpg',
+    },
+    {   
+        id: 14,
+        ano: '2009',
+        marca: 'Cliche',
+        imagem: '20021287_09Q4_MixZZZ_cliche_cale_nuske_1.jpg',
+    },
+    {   
+        id: 15,
+        ano: '2009',
+        marca: 'Flip',
+        imagem: '20021288_09Q4_MixZZZ_flip_team_1.jpg',
+    },
+    {   
+        id: 16,
+        ano: '2009',
+        marca: 'DGK',
+        imagem: '20021289_09Q4_MixZZZ_dgk_jack_curtin_1.jpg',
+    },
+    {   
+        id: 17,
+        ano: '2009',
+        marca: 'DGK',
+        imagem: '20021290_09Q4_MixZZZ_dgk_team_1.jpg',
+    },
+    {   
+        id: 18,
+        ano: '2009',
+        marca: 'Steadham',
+        imagem: '20021291_09Q4_MixZZZ_steadham_steve_steadham_1.jpg',
+    },
+    {   
+        id: 19,
+        ano: '2009',
+        marca: 'World Industries',
+        imagem: '20021292_09Q4_MixZZZ_world_industries_team_1.jpg',
+    },
+    {   
+        id: 20,
+        ano: '2009',
+        marca: 'World Industries',
+        imagem: '20021293_09Q4_MixZZZ_world_industries_team_1.jpg',
+    },
+    {   
+        id: 21,
+        ano: '2009',
+        marca: 'Toy Machine',
+        imagem: '20021294_09Q4_MixZZZ_toy_machine_diego_bucchieri_1.jpg',
+    },
 
 ];
 
 for (const produtoCatalogo of catalogo) {
-    const cartaoProduto = `<div class="border-solid border-2 border-black w-24 m-2" 
+    const cartaoProduto = `<div class=" w-24 m-2 text-sm" 
     id="card-produto-${produtoCatalogo.id}">
     <img 
     src="./img/${produtoCatalogo.imagem}" 
-    alt="imagem do skate 1"/>
+    alt="imagem do skate ${produtoCatalogo.id}"/>
+    <img
+    src="./img/notmarked.png"
+    alt="nao marcado" />
     <p>${produtoCatalogo.ano}</p>
     <p>${produtoCatalogo.marca}</p>
-    <button>Add</button>
     </div>`
 
     document.getElementById("container-produto").innerHTML += cartaoProduto;
