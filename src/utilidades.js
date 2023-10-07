@@ -1,7 +1,4 @@
-import { renderizarCatalogo } from "./src/cartaoProduto";
-import { inicializarColecao } from "./src/menuColecao";
-
-const catalogo = [
+export const catalogo = [
     {   
         id: 1,
         ano: '2009',
@@ -130,7 +127,3 @@ const catalogo = [
     },
 
 ];
-
-renderizarCatalogo();
-
-inicializarColecao();

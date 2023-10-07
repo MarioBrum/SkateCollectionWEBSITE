@@ -10,10 +10,11 @@
     crossorigin="anonymous" 
     referrerpolicy="no-referrer" />
   </head>
-  <body>
-    <section id="colecao" class="fixed top-0 bg-zinc-900 text-slate-200 right-0 h-screen w-[360px]">
+  <body class="flex flex-col">
+    <section id="colecao" 
+      class="fixed top-0 bg-zinc-900 text-slate-200 right-0 h-screen w-[360px] z-50 duration-200 border-l border-zinc-400 p-5 flex flex-col justify-between">
       <div id="cabecalho colecao" class="flex justify-between m-4">
-        <p>Collection</p>
+        <p class="text-xl">Collection</p>
         <button id="fechar-colecao">
           <i class="fa-solid fa-circle-xmark"></i>
         </button>
@@ -28,21 +29,22 @@
 
 
     </section>
-    <header class="flex bg-zinc-900 justify-between items-center">
+    <header class="flex bg-zinc-900 justify-between text-xl px-8 py-4 sticky items-center">
       <!--src="./img/Tech-Deck-logo.jpg"--> 
       <img 
         class="h-24"
         src="./img/td_logo.png" 
         alt="Logo Tech Deck">
         <div class="text-slate-200">
-          <button id="abrir-colecao">
+          <button id="abrir-colecao"
+          class=" mx-2">
             <p>Collection</p>
             <i class="fa-solid fa-box-archive" style="color: #ffffff;"></i>
           </button>
         </div>
     </header>
     <main>
-      <section id="container-produto" class="flex flex-wrap"></section>
+      <section id="container-produto" class="flex flex-wrap p-10 justify-center gap-10"></section>
     </main>
     <script type="module" src="./main.js"></script>
   </body>
