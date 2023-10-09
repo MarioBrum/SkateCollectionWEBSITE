@@ -26,11 +26,19 @@ export function renderizarCatalogo(){
 
     for( const produtoCatalogo of catalogo){
         document.getElementById(`adicionar-${produtoCatalogo.id}`).addEventListener('click',() => adicionarColecao(produtoCatalogo.id));
+        //pictureChange(idProduto);
     }
 }
 
 export function pictureChange(idProduto)
     {
         const produto = catalogo.find((p) => p.id === idProduto);
-        document.getElementById(`adicionar-${produto.id}`).src="./img/marked.png";
+        document.getElementById(`adicionar-${produto.id}`).innerHTML = 
+        `<button id="adicionar-${produtoCatalogo.id}">
+            <img
+                src="./img/marked.png"
+                alt="nao marcado" 
+                class=""
+            />
+        <button/>`
     }
