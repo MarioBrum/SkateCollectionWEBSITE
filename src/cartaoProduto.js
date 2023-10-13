@@ -22,6 +22,7 @@ export function renderizarCatalogo(){
         </div>`
     
         document.getElementById("container-produto").innerHTML += cartaoProduto;
+        
     }
 
     for( const produtoCatalogo of catalogo){

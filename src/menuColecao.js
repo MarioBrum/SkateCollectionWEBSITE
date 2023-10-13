@@ -62,3 +62,45 @@ function removerDaColecao(idProduto){
   renderizarProdutosColecao();
 
 }
+
+function desenharProdutoColecao(idProduto){
+  const produto = catalogo.find((p) => p.id === idProduto);
+  const containerProdutosColecao = document.getElementById("produtos-colecao");
+  const elementoArticle = document.createElement("article"); //cria tag <article>
+  const articleClass = ["flex","bg-slate-100","rounded-lg","p-1","relative"]; //h-70 rounded-md
+  for(const articleClass of articleClass){
+    elementoArticle.classList.add(articleClass);
+  }
+
+  const cartaoProdutoColecao = `<article>
+  <img 
+    src="./img/${produto.imagem}"
+    alt="Colecao: ${produto.id}"
+    class="h-70 rounded-md"
+  />
+  <div class="p-2 flex flex-col justify-between">
+    <p class="text-slate-200 text-xs">${produto.ano}</p>
+    <p class="text-slate-50 text-sm ">${produto.marca}</p>
+  </div>
+  <button id="remove-item${produto.id}">
+      <img 
+      src="./img/marked.png"
+      alt="nao marcado" 
+      class=""
+      /> 
+    <button/>
+  </article>`;
+  elementoArticle.innerHTML = cartaoProdutoColecao;
+  containerProdutosColecao.appendChild(elementoArticle);
+
+  //metodos clicaveis da colecao
+
+}
+
+function renderizarProdutosColecao(){
+  const containerProdutoColecao = document.getElementById("produtos-colecao");
+  containerProdutoColecao.innerHTML = "";
+  for(const idProduto of idsProdutosColecaoAdicionados){
+    desenharProdutoColecao(idProduto);
+  }
+}
